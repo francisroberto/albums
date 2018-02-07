@@ -6,8 +6,10 @@ import AlbumList from './src/components/AlbumList';
 
 // Create a component
 const App = () => (
-  <View>
-    <Header headerText={'Albums'} />
+  //This single view tag will render the Header and AlbumList components
+  //and they are used as tags
+  <View style={{ flex: 1 }}>
+    <Header headerText={'My Album List'} />
     <AlbumList />
   </View>
   );

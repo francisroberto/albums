@@ -8,6 +8,8 @@ const Header = (prop) => {
   const { textStyle, viewStyle } = styles;
 
   return (
+  //each of the 'styles' property, the viewStyle and
+  //textStyle are loaded up on the View and Text tags
     <View style={viewStyle}>
     <Text style={textStyle}>{prop.headerText}</Text>
     </View>
