@@ -4,27 +4,34 @@ import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
 
-const AlbumDetail = (props) => {
+const AlbumDetail = ({ album }) => {
+  const { thumbnail_image, artist, image, title } = album;
+  const { imageStyle,
+    thumbnailStyle,
+    thumbnailContainerStyle,
+    headerTextStyle,
+    headerContentStyle
+  } = styles;
   return (
       <Card>
         <CardSection>
-          <View style={styles.thumbnailContainerStyle}>
+          <View style={thumbnailContainerStyle}>
             <Image
-            style={styles.thumbnailStyle}
-            source={{ uri: props.album.thumbnail_image }}
+            style={thumbnailStyle}
+            source={{ uri: thumbnail_image }}
             />
           </View>
 
-          <View style={styles.headerContentStyle}>
-            <Text style={styles.headerTextStyle}>{props.album.title}</Text>
-            <Text>{props.album.artist}</Text>
+          <View style={headerContentStyle}>
+            <Text style={headerTextStyle}>{title}</Text>
+            <Text>{artist}</Text>
           </View>
         </CardSection>
 
         <CardSection>
           <Image
-          style={styles.imageStyle}
-          source={{ uri: props.album.image }}
+          style={imageStyle}
+          source={{ uri: image }}
           />
         </CardSection>
 
