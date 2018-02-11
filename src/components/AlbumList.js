@@ -15,11 +15,11 @@ class AlbumList extends Component {
   }
 
   renderAlbums() {
-    return this.state.albums.map(album =>
+    return this.state.albums.map(itemAlbum =>
       // the key={album.title} is placed to avoid an error
       //"warning: each child in an array or iterator should have a unique 'key' prop.
       //Check the render method"
-      <AlbumDetail key={album.title} album={album} />
+      <AlbumDetail key={itemAlbum.title} album={itemAlbum} />
     );
   }
 
