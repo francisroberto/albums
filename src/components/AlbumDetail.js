@@ -13,6 +13,10 @@ const AlbumDetail = ({ album }) => {
     headerContentStyle
   } = styles;
   return (
+    //1st cardsection for thumbnail image, album name and artist name,
+    //2nd cardsection for album image,
+    //3rd cardsection for buy now button with a link
+
       <Card>
         <CardSection>
           <View style={thumbnailContainerStyle}>
@@ -34,6 +38,7 @@ const AlbumDetail = ({ album }) => {
           source={{ uri: image }}
           />
         </CardSection>
+
 
         <CardSection>
           <Button onPress={() => Linking.openURL(url)}>
