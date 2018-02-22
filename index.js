@@ -11,6 +11,8 @@ const App = () => (
   <View style={{ flex: 1 }}>
     <Header headerText={'My Album List'} />
     <AlbumList />
+
+    
   </View>
   );
 
